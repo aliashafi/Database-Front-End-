@@ -1,0 +1,319 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #f4f7f8;
+}
+
+.topnav a {
+  float: left;
+  color: black;
+  text-align: center;
+  padding: 20px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color: #ddd;
+  color: black;
+}
+
+.topnav a.active {
+  background-color: rgb(135, 181, 255);
+  color: white;
+}
+</style>
+</head>
+<body>
+
+<div class="topnav">
+  <a class="active" href="#home">Home</a>
+  <a href="#news">Search Database</a>
+  <a href="#contact">Database Summary</a>
+  <a href="#about">Help</a>
+</div>
+
+<div style="padding-left:16px">
+  <h2></h2>
+</div>
+
+</body>
+</html>
+
+
+
+
+<!-- table  -->
+
+</body>
+
+<style>
+*,
+*:before,
+*:after {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  color: #384047;
+}
+
+form {
+  max-width: 300px;
+  margin: 50px auto; /*moves location of form down*/
+  padding: 30px auto;
+  background: #f4f7f8;
+  border-radius: 8px;
+}
+
+h1 {
+  margin: 0 0 0px 0px;
+  text-align: center;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="date"],
+input[type="datetime"],
+input[type="email"],
+input[type="number"],
+input[type="search"],
+input[type="tel"],
+input[type="time"],
+input[type="url"],
+textarea,
+
+select {
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  font-size: 12px;
+  height: 10px;
+  margin: 0;
+  outline: 0;
+  padding: 15px;
+  width: 100%;
+  background-color: #e8eeef;
+  color: #8a97a0;
+  box-shadow: 0 1px 0 rgba(0, 0, 0, 0.03) inset;
+  margin-bottom: 30px;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 0 4px 8px 0;
+}
+
+select {
+  padding: 6px;
+  height: 32px;
+  border-radius: 2px;
+}
+
+button {
+  padding: 19px 39px 18px 39px;
+  color: #FFF;
+  background-color: rgb(135, 181, 255);
+  font-size: 18px;
+  text-align: center;
+  font-style: normal;
+  border-radius: 5px;
+  width: 30%;
+  border: 1px solid rgb(135, 181, 255);
+  border-width: 1px 1px 3px;
+  box-shadow: 0 -1px 0 rgb(135, 181, 255) inset;
+  margin-bottom: 10px;
+}
+
+fieldset {
+  margin-bottom: 30px;
+  border: none;
+}
+
+legend {
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+label {
+  display: block;
+  margin-bottom: 8px;
+}
+
+label.light {
+  font-weight: 300;
+  display: inline;
+}
+
+.number {
+  background-color: #5fcf80;
+  color: #fff;
+  height: 30px;
+  width: 30px;
+  display: inline-block;
+  font-size: 0.8em;
+  margin-right: 4px;
+  line-height: 30px;
+  text-align: center;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.2);
+  border-radius: 100%;
+}
+
+
+table {
+  border-collapse: separate;
+  border-spacing: 10px 0;
+  font-size: .8em;
+}
+
+td {
+  padding: 0px;
+}
+
+tr { 
+  border-bottom: 1px solid #555;
+}
+
+
+@media screen and (min-width: 600px) {
+  form {
+    max-width: 800px;
+  }
+}
+</style>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<form action="index.html" method="post">
+
+  <h1>Add Patient</h1>
+    <fieldset>
+    <legend><span</span> Identification:
+    <hr style="border: 2px solid rgb(135, 181, 255);" /></legend></legend>
+
+<table>
+<tr>
+    <td><label for="mail">EC ID:</label>
+    <input type="email" id="mail" name="user_email" ></td>
+    <td><label for="mail">A ID:</label>
+    <input type="email" id="mail" name="user_email" ></td>
+</tr>
+</table>
+
+  <fieldset>
+    <legend><span ></span> Demogrpahics:
+    <!-- add line under title -->
+    <hr style="border: 2px solid rgb(135, 181, 255);" /></legend>
+<table>
+<tr>
+    <td><label for="password">Date of Birth:</label>
+    <input type="date" name="bday"></td>
+    <!-- <input type="password" id="password" name="user_password"></td> -->
+
+    <td><label for="job">Sex</label>
+      <select id="job" name="user_job">
+              <option value="frontend_developer">F</option>
+              <option value="php_developer">M</option></td>
+
+    <td><label for="password">Ethnicity:</label>
+    <input type="password" id="password" name="user_password"></td>
+</tr>
+</table>
+
+<table>
+
+  <td><label for="name">Age during EMU stay:</label>
+    <input type="text" id="name" name="user_name"></td>
+
+      <td><label for="name">Date of Surgery:</label>
+      <input type="date" name="bday"></td>
+
+      <td><label for="job">Language Dominance</label>
+        <select id="job" name="user_job">
+                <option value="frontend_developer">Left</option>
+                <option value="php_developer">Right</option>
+                <option value="php_developer">NA</option></td>
+
+    <td><label for="job">Previous Resection</label>
+      <select id="job" name="user_job">
+              <option value="frontend_developer">Yes</option>
+              <option value="php_developer">No</option></td>
+</tr>
+</table>
+
+
+<table>
+<tr>
+
+    <td><label for="job">History of Depression</label>
+      <select id="job" name="user_job">
+              <option value="frontend_developer">Yes, clinically diagnosed</option>
+              <option value="frontend_developer">Yes, not clinically diagnosed</option>
+              <option value="php_developer">No</option></td>
+
+    <td><label for="job">On psychiatric medication</label>
+      <select id="job" name="user_job">
+              <option value="frontend_developer">Yes</option>
+              <option value="php_developer">No</option></td>
+
+    <td><label for="job">RNS</label>
+      <select id="job" name="user_job">
+              <option value="frontend_developer">Yes</option>
+              <option value="php_developer">No</option></td>
+
+</tr>
+</table>
+
+  <!-- <fieldset>
+    <legend><span class="number">2</span> Your profile</legend>
+    <label for="bio">Bio:</label>
+    <textarea id="bio" name="user_bio"></textarea>
+  </fieldset>
+ -->
+<!--   <label for="job">Tasks</label>
+  <select id="job" name="user_job">
+            <optgroup label="Speech">
+                <option value="frontend_developer">Timit</option>
+                <option value="php_developer">Auditory Naming</option>
+                <option value="python_developer">Mandarin Tone</option>
+                <option value="rails_developer">Rails Developer</option>
+                <option value="web_designer">Web Designer</option>
+                <option value="wordpress_developer">Wordpress Developer</option>
+            </optgroup>
+            <optgroup label="SUBNETS">
+                <option value="android_developer">Stim Adaptation</option>
+                <option value="ios_developer">IMS</option>
+                <option value="mobile_designer">Anxiety</option>
+            </optgroup>
+            <optgroup label="Business">
+                <option value="business_owner">Business Owner</option>
+                <option value="freelancer">Freelancer</option>
+            </optgroup>
+            </select>
+
+  <label>Tasks</label>
+  <input type="checkbox" id="development" value="interest_development" name="user_interest"><label class="light" for="development">Development</label><br>
+  <input type="checkbox" id="design" value="interest_design" name="user_interest"><label class="light" for="design">Broca</label><br>
+  <input type="checkbox" id="business" value="interest_business" name="user_interest"><label class="light" for="business">Timit</label> -->
+  <class="topnav">
+  <a class="active" >
+  <button type="submit">Add Patient</button>
+  <button type="submit">Cancel</button>
+
+</form> 
+
+
+
+
+
+
+
+
