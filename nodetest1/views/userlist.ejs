@@ -8,12 +8,14 @@
     <h1>User List</h1>
     <ul>
       <%
-        var list = '';
+        var list = [];
         for (i = 0; i < userlist.length; i++) {
-          list += '<li><a href="mailto:' + userlist[i].master_id + '">' + userlist[i].mrn + '</a></li>';
-        }
-        return list;
+          list += '<li href="mailto:' + userlist[i].ec_id + '">' + userlist[i].ec_id + '</li>';
+        }3
+        return list
+
       %>
     </ul>
+    <table>
   </body>
 </html>

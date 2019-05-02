@@ -37,16 +37,28 @@ router.post('/adduser', function(req, res) {
     var db = req.db;
 
     // Get our form values. These rely on the "name" attributes
-    var mrn = req.body.mrn;
-    var master_id = req.body.master_id;
+    var a_id = req.body.a_id;
+    var ec_id = req.body.ec_id;
+    var sex = req.body.sex;
+    var ethnicity = req.body.ethnicity
+    var ethnicity = req.body.ethnicity
+    var DOB = req.body.DOB
+    var visit_date = req.body.visit_date
+    var language_dominance = req.body.LangDom
+    var native_language = req.body.native_language
 
     // Set our collection
     var collection = db.get('demographics');
-
     // Submit to the DB
     collection.insert({
-        "mrn" : mrn,
-        "master_id" : master_id
+        "ethnicity" : ethnicity,
+        "gender" : sex,
+        "DOB" : DOB, 
+        "visit_date": visit_date,
+        "ec_id" : ec_id,
+        "a_id" : a_id,
+        "language_dominance" : language_dominance,
+        "native_language" : native_language
     }, function (err, doc) {
         if (err) {
             // If it failed, return error
@@ -54,7 +66,7 @@ router.post('/adduser', function(req, res) {
         }
         else {
             // And forward to success page
-            res.redirect("userlist");
+            res.redirect("all_patients");
         }
     });
 });
@@ -70,7 +82,27 @@ router.get('/patient_table', function(req, res) {
 });
 
 router.get('/create_patient', function(req, res) {
-    res.render('create_patient', { title: 'Sign In' });
+    res.render('create_patient', { title: '' });
 });
+
+
+router.get('/all_patients', function(req, res) {
+    var db = req.db;
+    var collection = db.get('demographics');
+    collection.find({},{},function(e,docs){
+        res.render('all_patients', {
+            "all_patients" : docs
+        });
+    });
+});
+
+router.get('/test', function(req, res) {
+    res.render('test', { title: '' });
+    
+});
+
+
+
+
 
 module.exports = router;
